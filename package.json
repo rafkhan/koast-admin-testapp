@@ -1,0 +1,15 @@
+{
+  "name": "admin-api-example",
+  "version": "0.0.0",
+  "description": "A koast app",
+  "dependencies": {
+    "koast": "latest",
+    "gulp": "latest",
+    "gulp-util": "latest",
+    "rangle-gulp": "latest"
+  },
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  }
+}

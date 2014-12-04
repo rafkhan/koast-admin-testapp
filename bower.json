@@ -1,0 +1,10 @@
+{
+  "name": "admin-api-example",
+  "version": "0.0.0",
+  "directory": "client/bower_components",
+  "dependencies": {
+    "koast-angular": "latest",
+    "angular-ui": "latest",
+    "angular-ui-router": "latest"
+  }
+}

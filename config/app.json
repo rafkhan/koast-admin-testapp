@@ -1,0 +1,22 @@
+{
+  "app": {
+    "portNumber": 3000,
+    "routes": [
+      {
+        "route": "/admin/api",
+        "type": "module",
+        "module": "server/admin-api"
+      },
+      {
+        "route": "/api",
+        "type": "module",
+        "module": "server/api"
+      },
+      {
+        "route": "/",
+        "type": "static",
+        "path": "client"
+      }
+    ]
+  }
+}
