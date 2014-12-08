@@ -11,12 +11,11 @@ var access = process.env.AWS_ACCESS;
 var secret = process.env.AWS_SECRET;
 var bucket = process.env.AWS_S3_BUCKET;
 
-/*
 function setupS3() {
   //
   // Configure an S3 backup router
   //
-  var collections = ['collections', 'go', 'here'];
+  var collections = ['multi_a', 'multi_b'];
   var mongoUri = 'mongodb://localhost:27017/dumptestdb';
   var aws = {
     global: {
@@ -51,7 +50,6 @@ function configureApi(register) {
 
 
 var routerPromise = koast.admin.getRouter(configureApi);
-*/
 
 var defaults = {};
 defaults.authorization = function defaultAuthorization(req, res) {
@@ -59,15 +57,9 @@ defaults.authorization = function defaultAuthorization(req, res) {
 };
 
 
-var router = express.Router();
-router.get('/asd', function(req, res) {
-  res.send('fuk');
-});
-
-
 module.exports = {
   koastModule: {
     defaults: defaults,
-    router: q.when(router)
+    router: routerPromise
   }
 };
